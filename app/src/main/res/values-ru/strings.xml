@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="email">Электронная почта</string>
+    <string name="password">Пароль</string>
+    <string name="create">Создать</string>
+    <string name="auth">Авторизация</string>
+    <string name="login">Вход</string>
+    <string name="loading">Загрузка</string>
+    <string name="sign_in">Войти</string>
+    <string name="name">Имя</string>
+    <string name="save">Сохранить</string>
+    <string name="repeat_password">Повторите пароль</string>
+    <string name="register">Регистрация</string>
+    <string name="field_error">Поле заполнено неверно</string>
+    <string name="password_rule">Пароль должен быть не короче 6 символов и содержать минимум 1 строчную букву, 1 заглавную, и 1 цифру.</string>
+    <string name="password_equality_rule">Пароли должны совпадать</string>
+    <string name="error">Ошибка</string>
+    <string name="no_user_found">Пользователей с такой почтой не найдено. Создайте запись или проверьте правильность введенных данных</string>
+    <string name="wrong_password">Неверный пароль</string>
+    <string formatted="false" name="weather_message">%s, сейчас в Санкт-Петербурге %s градусов, %s</string>
+    <string name="dialog_action_cancel">Отмена</string>
+    <string name="dialog_action_ok">ОК</string>
+    <string name="dialog_error_title">Упс…</string>
+    <string name="user_exists">Пользователь с такой почтой уже существует</string>
+
+</resources>

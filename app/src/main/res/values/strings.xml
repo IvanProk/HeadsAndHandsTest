@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Heads and Hands Test</string>
+
+    <string name="action_settings">Settings</string>
+
+    <string name="dialog_action_ok">OK</string>
+    <string name="dialog_action_cancel">Cancel</string>
+    <string name="dialog_error_title">Sorry</string>
+
+    <string name="empty_ribots">There aren\'t any ribots</string>
+    <string name="loading">Loading</string>
+    <string name="sign_in">Sign in</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="create">create</string>
+    <string name="login">Login</string>
+    <string name="auth">Authorization</string>
+    <string name="name">Name</string>
+    <string name="save">Save</string>
+    <string name="repeat_password">Repeat password</string>
+    <string name="register">Registration</string>
+    <string name="field_error">Field is incorrect</string>
+    <string name="password_rule">The password must be at least 6 characters and contain at least 1 lowercase letter, 1 uppercase, and 1 number.</string>
+    <string name="password_equality_rule">Passwords should be equals</string>
+    <string name="error">Error</string>
+    <string name="no_user_found">User with such email not found. Create an account or check that the data</string>
+    <string name="wrong_password">Wrong password</string>
+    <string formatted="false" name="weather_message">%s, now in Saint Petersburg %s degrees, %s</string>
+    <string name="user_exists">User with this email already exists</string>
+</resources>
