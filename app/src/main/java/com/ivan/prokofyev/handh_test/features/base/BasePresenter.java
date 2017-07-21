@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.base;
+package com.ivan.prokofyev.handh_test.features.base;
 
 /**
  * Base class that implements the Presenter interface and provides a base implementation for

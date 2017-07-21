@@ -17,4 +17,9 @@ public class TextUtilsTest {
         System.out.println("Qwerty1".matches(TextUtils.PASSWORD_PATTERN));
         System.out.println("Qwerty 1".matches(TextUtils.PASSWORD_PATTERN));
     }
+
+    @Test
+    public void test(){
+        RxTest.test();
+    }
 }

@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.auth.sign_in;
+package com.ivan.prokofyev.handh_test.features.auth.sign_in;
 
 import android.content.Context;
 import android.content.Intent;
@@ -9,11 +9,13 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
+import android.widget.Toast;
 
 import com.ivan.prokofyev.handh_test.R;
 import com.ivan.prokofyev.handh_test.data.model.User;
-import com.ivan.prokofyev.handh_test.ui.auth.sign_up.SignUpActivity;
-import com.ivan.prokofyev.handh_test.ui.base.BaseActivity;
+import com.ivan.prokofyev.handh_test.features.auth.sign_up.SignUpActivity;
+import com.ivan.prokofyev.handh_test.features.base.BaseActivity;
 import com.ivan.prokofyev.handh_test.util.DialogFactory;
 import com.ivan.prokofyev.handh_test.util.RxEventBus;
 import com.ivan.prokofyev.handh_test.util.TextUtils;
@@ -23,6 +25,7 @@ import javax.inject.Inject;
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import butterknife.OnLongClick;
 import rx.android.schedulers.AndroidSchedulers;
 import rx.functions.Action1;
 import rx.schedulers.Schedulers;
@@ -47,12 +50,13 @@ public class SignInActivity extends BaseActivity implements SignInMvpView {
 
     @BindView(R.id.btnSignIn)
     Button btnSignIn;
+    @BindView(R.id.btnFb)
+    ImageButton btnFb;
     @BindView(R.id.toolbar)
     Toolbar toolbar;
 
     @Inject
     RxEventBus mEventBus;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,6 +71,14 @@ public class SignInActivity extends BaseActivity implements SignInMvpView {
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(getSignUpEventAction());
+    }
+
+
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        mSignInPresenter.onActivityResult(requestCode, resultCode, data);
     }
 
     private Action1<? super User> getSignUpEventAction() {
@@ -123,6 +135,19 @@ public class SignInActivity extends BaseActivity implements SignInMvpView {
             mSignInPresenter.signIn(etEmail.getText().toString().toLowerCase(),
                     etPassword.getText().toString());
         }
+    }
+
+    @OnClick(R.id.btnFb)
+    public void signInWithFacebook() {
+        mSignInPresenter.loginWithFacebook(this);
+    }
+
+
+    @OnLongClick(R.id.btnFb)
+    public boolean signOutFb() {
+        mSignInPresenter.logOutFacebook();
+        Toast.makeText(getApplicationContext(), "Logged out", Toast.LENGTH_LONG).show();
+        return true;
     }
 
     public static void start(Context context) {

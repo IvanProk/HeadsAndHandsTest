@@ -4,6 +4,7 @@ import com.ivan.prokofyev.handh_test.data.DataManager;
 import com.ivan.prokofyev.handh_test.data.local.DatabaseHelper;
 import com.ivan.prokofyev.handh_test.data.local.PreferencesHelper;
 import com.ivan.prokofyev.handh_test.data.remote.ApiService;
+import com.ivan.prokofyev.handh_test.data.remote.FacebookAuthService;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -22,15 +23,21 @@ import org.mockito.junit.MockitoJUnitRunner;
 @RunWith(MockitoJUnitRunner.class)
 public class DataManagerTest {
 
-    @Mock DatabaseHelper mMockDatabaseHelper;
-    @Mock PreferencesHelper mMockPreferencesHelper;
+    @Mock
+    DatabaseHelper mMockDatabaseHelper;
+    @Mock
+    PreferencesHelper mMockPreferencesHelper;
     @Mock
     ApiService mMockApiService;
+    @Mock
+    FacebookAuthService mMockFacebookAuthService;
     private DataManager mDataManager;
 
     @Before
     public void setUp() {
-        mDataManager = new DataManager(mMockApiService, mMockPreferencesHelper,
+        mDataManager = new DataManager(mMockApiService,
+                mMockFacebookAuthService,
+                mMockPreferencesHelper,
                 mMockDatabaseHelper);
     }
 
@@ -70,7 +77,7 @@ public class DataManagerTest {
     }
 
 //    private void stubSyncRibotsHelperCalls(List<Ribot> ribots) {
-        // Stub calls to the prokofyev service and database helper.
+    // Stub calls to the prokofyev service and database helper.
 //        when(mMockApiService.getRibots())
 //                .thenReturn(Observable.just(ribots));
 //        when(mMockDatabaseHelper.setWeather(ribots))

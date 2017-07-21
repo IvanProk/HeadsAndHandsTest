@@ -3,13 +3,15 @@ package com.ivan.prokofyev.handh_test.test.common.injection.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.ivan.prokofyev.handh_test.data.DataManager;
+import com.ivan.prokofyev.handh_test.data.remote.ApiService;
+import com.ivan.prokofyev.handh_test.data.remote.FacebookAuthService;
+import com.ivan.prokofyev.handh_test.injection.ApplicationContext;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-import com.ivan.prokofyev.handh_test.data.DataManager;
-import com.ivan.prokofyev.handh_test.data.remote.ApiService;
-import com.ivan.prokofyev.handh_test.injection.ApplicationContext;
 
 import static org.mockito.Mockito.mock;
 
@@ -47,8 +49,14 @@ public class ApplicationTestModule {
 
     @Provides
     @Singleton
-    ApiService provideRibotsService() {
+    ApiService provideApiService() {
         return mock(ApiService.class);
+    }
+
+    @Provides
+    @Singleton
+    FacebookAuthService provideFacebookAuthService() {
+        return mock(FacebookAuthService.class);
     }
 
 }

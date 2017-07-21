@@ -6,7 +6,7 @@ import android.support.test.rule.ActivityTestRule;
 import android.support.test.runner.AndroidJUnit4;
 
 import com.ivan.prokofyev.handh_test.test.common.TestComponentRule;
-import com.ivan.prokofyev.handh_test.ui.main.MainActivity;
+import com.ivan.prokofyev.handh_test.features.main.MainActivity;
 
 import org.junit.Rule;
 import org.junit.Test;

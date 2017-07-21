@@ -1,6 +1,9 @@
 <resources>
     <string name="app_name">Heads and Hands Test</string>
 
+    <string name="facebook_app_id">1285694264887348</string>
+    <string name="fb_login_protocol_scheme">fb1285694264887348</string>
+
     <string name="action_settings">Settings</string>
 
     <string name="dialog_action_ok">OK</string>

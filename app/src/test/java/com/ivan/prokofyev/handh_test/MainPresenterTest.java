@@ -1,8 +1,8 @@
 package com.ivan.prokofyev.handh_test;
 
 import com.ivan.prokofyev.handh_test.data.DataManager;
-import com.ivan.prokofyev.handh_test.ui.main.MainMvpView;
-import com.ivan.prokofyev.handh_test.ui.main.MainPresenter;
+import com.ivan.prokofyev.handh_test.features.main.MainMvpView;
+import com.ivan.prokofyev.handh_test.features.main.MainPresenter;
 import com.ivan.prokofyev.handh_test.util.RxSchedulersOverrideRule;
 
 import org.junit.After;

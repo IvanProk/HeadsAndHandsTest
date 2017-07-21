@@ -1,9 +1,9 @@
-package com.ivan.prokofyev.handh_test.ui.main;
+package com.ivan.prokofyev.handh_test.features.main;
 
 import com.ivan.prokofyev.handh_test.data.DataManager;
 import com.ivan.prokofyev.handh_test.data.model.Weather;
 import com.ivan.prokofyev.handh_test.injection.ConfigPersistent;
-import com.ivan.prokofyev.handh_test.ui.base.BasePresenter;
+import com.ivan.prokofyev.handh_test.features.base.BasePresenter;
 import com.ivan.prokofyev.handh_test.util.RxUtil;
 
 import javax.inject.Inject;

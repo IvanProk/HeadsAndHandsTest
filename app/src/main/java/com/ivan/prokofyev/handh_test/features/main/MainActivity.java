@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.main;
+package com.ivan.prokofyev.handh_test.features.main;
 
 import android.content.Context;
 import android.content.Intent;
@@ -8,8 +8,8 @@ import android.view.ViewGroup;
 
 import com.ivan.prokofyev.handh_test.R;
 import com.ivan.prokofyev.handh_test.data.SyncService;
-import com.ivan.prokofyev.handh_test.ui.auth.sign_in.SignInActivity;
-import com.ivan.prokofyev.handh_test.ui.base.BaseActivity;
+import com.ivan.prokofyev.handh_test.features.auth.sign_in.SignInActivity;
+import com.ivan.prokofyev.handh_test.features.base.BaseActivity;
 import com.ivan.prokofyev.handh_test.util.RxEventBus;
 
 import javax.inject.Inject;

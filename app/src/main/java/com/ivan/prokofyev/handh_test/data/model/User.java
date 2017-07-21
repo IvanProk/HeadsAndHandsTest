@@ -10,6 +10,7 @@ public abstract class User {
     public abstract String name();
     public abstract String email();
     public abstract String password();
+    public abstract String token();
 
     public static Builder builder(){return new AutoValue_User.Builder();}
 
@@ -18,6 +19,7 @@ public abstract class User {
         public abstract Builder setName(String name);
         public abstract Builder setEmail(String email);
         public abstract Builder setPassword(String password);
+        public abstract Builder setToken(String token);
         public abstract User build();
     }
 }

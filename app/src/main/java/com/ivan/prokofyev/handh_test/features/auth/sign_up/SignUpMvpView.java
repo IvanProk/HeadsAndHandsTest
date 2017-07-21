@@ -1,6 +1,6 @@
-package com.ivan.prokofyev.handh_test.ui.auth.sign_up;
+package com.ivan.prokofyev.handh_test.features.auth.sign_up;
 
-import com.ivan.prokofyev.handh_test.ui.base.MvpView;
+import com.ivan.prokofyev.handh_test.features.base.MvpView;
 
 /**
  * Created by Shiraha on 7/12/2017.

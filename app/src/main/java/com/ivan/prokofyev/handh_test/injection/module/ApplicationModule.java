@@ -3,13 +3,14 @@ package com.ivan.prokofyev.handh_test.injection.module;
 import android.app.Application;
 import android.content.Context;
 
+import com.ivan.prokofyev.handh_test.data.remote.ApiService;
+import com.ivan.prokofyev.handh_test.data.remote.FacebookAuthService;
+import com.ivan.prokofyev.handh_test.injection.ApplicationContext;
+
 import javax.inject.Singleton;
 
 import dagger.Module;
 import dagger.Provides;
-
-import com.ivan.prokofyev.handh_test.data.remote.ApiService;
-import com.ivan.prokofyev.handh_test.injection.ApplicationContext;
 
 /**
  * Provide application-level dependencies.
@@ -35,8 +36,14 @@ public class ApplicationModule {
 
     @Provides
     @Singleton
-    ApiService provideRibotsService() {
+    ApiService provideApiService() {
         return ApiService.Creator.newWeatherService();
+    }
+
+    @Provides
+    @Singleton
+    FacebookAuthService provideFacebookAuthService() {
+        return FacebookAuthService.Creator.newFacebookAuthService();
     }
 
 }

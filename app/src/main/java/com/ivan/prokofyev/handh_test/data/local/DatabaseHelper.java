@@ -77,9 +77,18 @@ public class DatabaseHelper {
     public Observable<User> getUser(String email) {
         Observable<User> user =  mDb.createQuery(Db.UserTable.TABLE_NAME,
                 "SELECT * FROM " + Db.UserTable.TABLE_NAME + " WHERE " +
-                        Db.UserTable.COLUMN_EMAIL + " = '" + email + "'")// TODO: 7/14/2017 make @ -> "@"
+                        Db.UserTable.COLUMN_EMAIL + " = '" + email + "'")
                 .mapToOneOrDefault(Db.UserTable::parseCursor, null);
     return user;
     }
+
+    public Observable<User> getUserByToken(String token) {
+        Observable<User> user =  mDb.createQuery(Db.UserTable.TABLE_NAME,
+                "SELECT * FROM " + Db.UserTable.TABLE_NAME + " WHERE " +
+                        Db.UserTable.COLUMN_TOKEN + " = '" + token + "'")
+                .mapToOneOrDefault(Db.UserTable::parseCursor, null);
+        return user;
+    }
+
 
 }

@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.base;
+package com.ivan.prokofyev.handh_test.features.base;
 
 
 /**

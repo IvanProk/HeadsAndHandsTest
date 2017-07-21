@@ -2,9 +2,9 @@ package com.ivan.prokofyev.handh_test.injection.component;
 
 import com.ivan.prokofyev.handh_test.injection.PerActivity;
 import com.ivan.prokofyev.handh_test.injection.module.ActivityModule;
-import com.ivan.prokofyev.handh_test.ui.auth.sign_in.SignInActivity;
-import com.ivan.prokofyev.handh_test.ui.auth.sign_up.SignUpActivity;
-import com.ivan.prokofyev.handh_test.ui.main.MainActivity;
+import com.ivan.prokofyev.handh_test.features.auth.sign_in.SignInActivity;
+import com.ivan.prokofyev.handh_test.features.auth.sign_up.SignUpActivity;
+import com.ivan.prokofyev.handh_test.features.main.MainActivity;
 
 import dagger.Subcomponent;
 

@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.base;
+package com.ivan.prokofyev.handh_test.features.base;
 
 /**
  * Every presenter in the app must either implement this interface or extend BasePresenter

@@ -3,13 +3,12 @@ package com.ivan.prokofyev.handh_test;
 import android.app.Application;
 import android.content.Context;
 
-import com.crashlytics.android.Crashlytics;
+import com.facebook.FacebookSdk;
 import com.facebook.stetho.Stetho;
 import com.ivan.prokofyev.handh_test.injection.component.ApplicationComponent;
 import com.ivan.prokofyev.handh_test.injection.component.DaggerApplicationComponent;
 import com.ivan.prokofyev.handh_test.injection.module.ApplicationModule;
 
-import io.fabric.sdk.android.Fabric;
 import timber.log.Timber;
 
 public class HTApplication extends Application  {
@@ -22,14 +21,15 @@ public class HTApplication extends Application  {
 
         if (BuildConfig.DEBUG) {
             Timber.plant(new Timber.DebugTree());
-            Fabric.with(this, new Crashlytics());
+//            Fabric.with(this, new Crashlytics());
             Stetho.initialize(Stetho.newInitializerBuilder(this)
                     .enableWebKitInspector(Stetho.defaultInspectorModulesProvider(this))
                     .enableDumpapp(Stetho.defaultDumperPluginsProvider(this))
                     .build());
         }
 
-
+        FacebookSdk.sdkInitialize(getApplicationContext());
+        FacebookSdk.setIsDebugEnabled(true);
     }
 
     public static HTApplication get(Context context) {

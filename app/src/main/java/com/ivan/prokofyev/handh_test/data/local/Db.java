@@ -48,19 +48,21 @@ public class Db {
         public static final String COLUMN_NAME = "name";
         public static final String COLUMN_EMAIL = "email";
         public static final String COLUMN_PASSWORD = "password";
-
+        public static final String COLUMN_TOKEN = "token";
 
         public static final String CREATE =
                 "CREATE TABLE " + TABLE_NAME + " (" +
                         COLUMN_EMAIL + " TEXT PRIMARY KEY, " +
                         COLUMN_NAME + " TEXT NOT NULL, " +
-                        COLUMN_PASSWORD + " TEXT NOT NULL" + " ); ";
+                        COLUMN_PASSWORD + " TEXT, " +
+                        COLUMN_TOKEN + " TEXT" + " ); ";
 
         public static ContentValues toContentValues(User user) {
             ContentValues values = new ContentValues();
             values.put(COLUMN_NAME, user.name());
             values.put(COLUMN_EMAIL, user.email());
             values.put(COLUMN_PASSWORD, user.password());
+            values.put(COLUMN_TOKEN, user.token());
             return values;
         }
 
@@ -69,6 +71,7 @@ public class Db {
                     .setName(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_NAME)))
                     .setEmail(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_EMAIL)))
                     .setPassword(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_PASSWORD)))
+                    .setToken(cursor.getString(cursor.getColumnIndexOrThrow(COLUMN_TOKEN)))
                     .build();
         }
     }

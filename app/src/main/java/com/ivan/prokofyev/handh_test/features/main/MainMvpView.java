@@ -1,6 +1,6 @@
-package com.ivan.prokofyev.handh_test.ui.main;
+package com.ivan.prokofyev.handh_test.features.main;
 
-import com.ivan.prokofyev.handh_test.ui.base.MvpView;
+import com.ivan.prokofyev.handh_test.features.base.MvpView;
 
 public interface MainMvpView extends MvpView {
 

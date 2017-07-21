@@ -1,4 +1,4 @@
-package com.ivan.prokofyev.handh_test.ui.auth.sign_up;
+package com.ivan.prokofyev.handh_test.features.auth.sign_up;
 
 import android.app.Dialog;
 import android.content.Context;
@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 
 import com.ivan.prokofyev.handh_test.R;
-import com.ivan.prokofyev.handh_test.ui.base.BaseActivity;
+import com.ivan.prokofyev.handh_test.features.base.BaseActivity;
 import com.ivan.prokofyev.handh_test.util.TextUtils;
 
 import javax.inject.Inject;

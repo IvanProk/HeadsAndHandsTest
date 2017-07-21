@@ -3,7 +3,7 @@ package com.ivan.prokofyev.handh_test.injection.component;
 import dagger.Component;
 import com.ivan.prokofyev.handh_test.injection.ConfigPersistent;
 import com.ivan.prokofyev.handh_test.injection.module.ActivityModule;
-import com.ivan.prokofyev.handh_test.ui.base.BaseActivity;
+import com.ivan.prokofyev.handh_test.features.base.BaseActivity;
 
 /**
  * A dagger component that will live during the lifecycle of an Activity but it won't

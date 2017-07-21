@@ -1,9 +1,9 @@
-package com.ivan.prokofyev.handh_test.ui.auth.sign_up;
+package com.ivan.prokofyev.handh_test.features.auth.sign_up;
 
 import com.ivan.prokofyev.handh_test.data.DataManager;
 import com.ivan.prokofyev.handh_test.data.model.User;
 import com.ivan.prokofyev.handh_test.injection.ConfigPersistent;
-import com.ivan.prokofyev.handh_test.ui.base.BasePresenter;
+import com.ivan.prokofyev.handh_test.features.base.BasePresenter;
 import com.ivan.prokofyev.handh_test.util.RxEventBus;
 import com.ivan.prokofyev.handh_test.util.RxUtil;
 
@@ -48,6 +48,7 @@ public class SignUpPresenter extends BasePresenter<SignUpMvpView> {
                 .setEmail(email)
                 .setName(name)
                 .setPassword(password)
+                .setToken("")
                 .build();
         getMvpView().toggleLoader(true);
         mSubscription = mDataManager.getUser(email).flatMap(user1 -> {
